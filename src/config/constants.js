@@ -17,6 +17,10 @@ const constants = {
         // Server error
         internalServerError: 500,
     },
+
+    prismaCodes: {
+        duplicate: "P2002",
+    },
 };
 
 module.exports = constants;
