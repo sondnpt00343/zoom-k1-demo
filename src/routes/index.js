@@ -5,10 +5,10 @@ const router = express.Router();
 const postfix = ".route.js";
 
 readdirSync(__dirname)
-    .filter((_name) => _name.endsWith(postfix))
-    .forEach((fileName) => {
-        const resource = fileName.replace(postfix, "");
-        router.use(`/${resource}`, require(`./${fileName}`));
-    });
+  .filter((_name) => _name.endsWith(postfix))
+  .forEach((fileName) => {
+    const resource = fileName.replace(postfix, "");
+    router.use(`/${resource}`, require(`./${fileName}`));
+  });
 
 module.exports = router;

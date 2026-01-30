@@ -7,8 +7,8 @@ const cors = require("cors");
 
 const rootRouter = require("@/routes");
 const customResponse = require("@/middlewares/customResponse");
-const errorHandle = require("./src/middlewares/errorHandle");
-const notFoundHandle = require("./src/middlewares/notFoundHandle");
+const errorHandle = require("@/middlewares/errorHandle");
+const notFoundHandle = require("@/middlewares/notFoundHandle");
 
 const app = express();
 const port = 3000;
@@ -26,5 +26,5 @@ app.use(notFoundHandle);
 app.use(errorHandle);
 
 app.listen(port, () => {
-    console.log(`Demo app listening on port ${port}`);
+  console.log(`Demo app listening on port ${port}`);
 });
