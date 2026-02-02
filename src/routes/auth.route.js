@@ -12,3 +12,8 @@ router.post("/refresh-token", authController.refreshToken);
 router.get("/me", authRequired, authController.getCurrentUser);
 
 module.exports = router;
+
+// 1. Websocket - Realtime App (Chat, Notification, ...)
+// 2. AI Platform (OpenAI API, Gemini API, ...)
+// 3. HSL - video streaming
+// 4. Payment
